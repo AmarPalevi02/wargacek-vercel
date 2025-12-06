@@ -1,0 +1,6 @@
+export const FETCH_LAPORAN_REQUEST = 'redux/fetch/FETCH_LAPORAN_REQUEST'
+export const FETCH_LAPORAN_SUCCESS = 'redux/fetch/FETCH_LAPORAN_SUCCESS'
+export const FETCH_LAPORAN_FAILURE = 'redux/fetch/FETCH_LAPORAN_FAILURE'
+export const RESET_FETCH_LAPORAN = 'redux/fetch/RESET_FETCH_LAPORAN' 
+export const SET_RADIUS = 'redux/fetch/SET_RADIUS'
+export const LOAD_RADIUS_FROM_STORAGE = 'redux/fetch/LOAD_RADIUS_FROM_STORAGE'

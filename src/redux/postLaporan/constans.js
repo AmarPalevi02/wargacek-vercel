@@ -1,0 +1,4 @@
+export const START_POST_LAPORAN = 'redux/START_POST_LAPORAN';
+export const SUCCESS_POST_LAPORAN = 'redux/SUCCESS_POST_LAPORAN';
+export const ERROR_POST_LAPORAN = 'redux/ERROR_POST_LAPORAN';
+export const RESET_POST_LAPORAN = 'redux/RESET_POST_LAPORAN';
