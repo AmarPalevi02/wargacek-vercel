@@ -14,7 +14,8 @@ export const getDatas = async (resource, params) => {
          params,
          headers: {
             Authorization: `Bearer ${token}`
-         }
+         },
+          withCredentials: true,
       })
 
       return response
