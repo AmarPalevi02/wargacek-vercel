@@ -131,6 +131,7 @@ const Login = () => {
                <div className="flex-1 relative">
                   <img
                      src={captchaUrl}
+                     crossOrigin="use-credentials"
                      alt="captcha"
                      className="w-full h-14 object-contain bg-white rounded border border-gray-300"
                   />
