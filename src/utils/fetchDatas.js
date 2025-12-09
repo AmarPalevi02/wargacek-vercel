@@ -4,6 +4,8 @@ import handleError from "./handeleError";
 
 import { configs } from "../configs/config";
 
+axios.defaults.withCredentials = true;
+
 export const getDatas = async (resource, params) => {
    try {
       const { token } = Cookies.get('auth')
@@ -16,6 +18,7 @@ export const getDatas = async (resource, params) => {
             Authorization: `Bearer ${token}`
          },
           withCredentials: true,
+          credentials: "include"
       })
 
       return response
