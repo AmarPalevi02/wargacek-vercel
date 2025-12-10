@@ -10,7 +10,7 @@ import PageLayout from "../components/layout/PageLayout";
 
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import {  postData } from "../utils/fetchDatas";
+import { postData } from "../utils/fetchDatas";
 import { useDispatch } from "react-redux";
 import { userLogin } from "../redux/auth/action";
 import { showAlert } from "../redux/alert/action";
@@ -32,6 +32,26 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [captchaUrl, setCaptchaUrl] = useState(getCaptchaUrl());
 
+  const initSession = async () => {
+    try {
+      const res = await axios.get(
+        `${configs.base_url_dev}${configs.version}/init`,
+        {
+          withCredentials: true,
+        }
+      );
+      console.log("Session initialized:", res.data);
+    } catch (err) {
+      console.warn("Init session failed:", err);
+    }
+  };
+
+  useEffect(() => {
+    initSession().then(() => {
+      setCaptchaUrl(getCaptchaUrl());
+    });
+  }, []);
+
   function getCaptchaUrl() {
     return `${configs.base_url_dev}${configs.version}/captcha?${Date.now()}`;
   }
@@ -40,13 +60,13 @@ const Login = () => {
     setCaptchaUrl(getCaptchaUrl());
   };
 
-  const initial = async () => {
-  return await axios.get(`${configs.base_url_dev}${configs.version}/init`)
-  }
+  // const initial = async () => {
+  // return await axios.get(`${configs.base_url_dev}${configs.version}/init`)
+  // }
 
-  useEffect(() => {
-   initial()
-  }, []);
+  // useEffect(() => {
+  //  initial()
+  // }, []);
 
   const handleLogin = async (data) => {
     setIsloading(true);
