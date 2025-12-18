@@ -45,14 +45,14 @@ const LandingPage = () => {
           <div className="flex items-start gap-3 bg-gradient-to-r from-green-100 to-green-200 rounded-xl p-5 shadow-sm hover:shadow-md transition">
             <FaPlusCircle className="text-3xl text-[#6b5778]" />
             <p className="text-base font-medium ">
-              Melaporkan kerusakan (lokasi, foto, deskripsi)
+              Melaporkan Lingkungan sekitar (lokasi, foto, deskripsi)
             </p>
           </div>
 
           <div className="flex items-start gap-3 bg-gradient-to-r from-red-100 to-red-200 rounded-xl p-5 shadow-sm hover:shadow-md transition">
             <FaMapMarkerAlt className="text-3xl text-red-500" />
             <p className="text-base font-medium">
-              Menampilkan laporan kerusakan
+              Menampilkan laporan lingkungan
             </p>
           </div>
 
@@ -75,7 +75,7 @@ const LandingPage = () => {
         <div className="bg-white rounded-2xl shadow-md p-8">
           <h2 className="text-2xl font-semibold text-gray-800">Tujuan</h2>
           <p className="text-gray-600 mt-3 text-justify leading-7">
-            Menyediakan platform digital berbasis crowdsourcing yang
+            Menyediakan platform digital berbasis Crowd Initiation yang
             memungkinkan warga untuk saling berbagi dan memverifikasi informasi
             lapangan secara cepat dan akurat.
           </p>
