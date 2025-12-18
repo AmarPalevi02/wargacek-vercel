@@ -58,8 +58,8 @@ const Register = () => {
           type="text"
           name="username"
           id="username"
-          label="User Name"
-          placeholder="Masukan User Name"
+          label="Username"
+          placeholder="Masukan Username"
           register={register}
           error={errors.username}
           {...register("username", {
